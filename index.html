@@ -115,16 +115,16 @@
 				<p><strong>You!!!!!!!!!!</strong></p>
 			</div>
 		</div>
-		<div id="navbar" class="navbar navbar-fixed-bottom">
+		<div id="navbar" class="navbar navbar-bottom" style="position: absolute; bottom: 0%; left: 42%;">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
 					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
-					<button class="btn btn-primary" id="play">Special Music for You!! Let's play</button>
-					<button class="btn btn-primary" id="bannar_coming">Let's do some decoration!!</button>
+					<button class="btn btn-primary" id="play">Play Music</button>
+					<button class="btn btn-primary" id="bannar_coming">Some decoration!!</button>
 					<button class="btn btn-primary" id="balloons_flying">Some Balloons!!</button>
 					<button class="btn btn-primary" id="cake_fadein">Special Cake for You</button>
-					<button class="btn btn-primary" id="light_candle">Light a Candle</button>
-					<button class="btn btn-primary" id="wish_message">Happy Birthday Ruby!!</button>
+					<button class="btn btn-primary" id="light_candle">Light Candle</button>
+					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
 					<button onclick="scrollToSection('video-container', 'cf-box')" class="btn btn-primary" id="story">Message for You Babe!!</button>
 				</div>
 			</div>
@@ -139,18 +139,18 @@
 		</video>
 	  </div>
 
-	  <!-- <div id="cf-box" style="max-height: 100vh; display: none;">
-		<img style="width: 100%; height: 100%;" src="assets/front-page-removebg-preview.png" alt="" />
-    <canvas id="my-canvas">
-      
-    </canvas>
-	  </div> -->
+	  <div id="cf-box" style="height: 100vh; display: none; position: relative;">
+		<img style="width: 100%; height: auto; " src="happybthimg.jpg" alt="" />
+
+		<p style="position: absolute; bottom: 70px;"> <a target="_blank" href="https://www.canva.com/design/DAF2eyQvE2U/Gd72XBjF1b_3wKHMVJFwQA/edit?utm_content=DAF2eyQvE2U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"> Click Here To See Photo Slide </a> </p>
+    
+	  </div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="effect.js"></script>
-<script src="node_modules/confetti-js/dist/index.min.js"></script>
+<script src="confetti.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -185,13 +185,13 @@
 	function scrollToSection(sectionId, idf) {
 		
       var section = document.getElementById(sectionId);
-	//   var cf = document.getElementById(idf);
+	  var cf = document.getElementById(idf);
       section.style.display = 'block';
-	//   cf.style.display = 'block';
+	  cf.style.display = 'block';
 	  console.log(section.style.display, 'id')
 	  section.scrollIntoView({ behavior: 'smooth' });
   }
-
+  var navBar = document.getElementsByClassName('navbar');
   var fixedElements = document.getElementsByClassName('balloons');
   var scrollThreshold = 100; // Adjust this value based on when you want to hide the element
 
@@ -201,17 +201,36 @@
 	  for (var i = 0; i < fixedElements.length; i++) {
 		fixedElements[i].style.top = '-200px';
   }
+//   navBar.style.top = '-200px';
+//   if (window.scrollY > 300) {
+//       start()
+//   }
+  
     } else {
       // Scrolled back above the threshold, show the fixed element
       for (var i = 0; i < fixedElements.length; i++) {
 		fixedElements[i].style.top = '240px';
   }
+//   navBar.style.top = '0';
     }
   })
 
-  var confettiSettings = { target: 'my-canvas' };
-     var confetti = new ConfettiGenerator(confettiSettings);
-     confetti.render();
+  const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        // start();
+        // stop();
 
   </script>
 </html>

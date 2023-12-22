@@ -28,7 +28,7 @@ $("document").ready(function () {
     $("body").addClass("peach");
     $(this)
       .fadeOut("slow")
-      .delay(500)
+      .delay(2000)
       .promise()
       .done(function () {
         $("#play").fadeIn("slow");
@@ -47,7 +47,7 @@ $("document").ready(function () {
     $("body").addClass("peach-after");
     $(this)
       .fadeOut("slow")
-      .delay(500)
+      .delay(2000)
       .promise()
       .done(function () {
         $("#bannar_coming").fadeIn("slow");
@@ -58,7 +58,7 @@ $("document").ready(function () {
     $(".bannar").addClass("bannar-come");
     $(this)
       .fadeOut("slow")
-      .delay(500)
+      .delay(2000)
       .promise()
       .done(function () {
         $("#balloons_flying").fadeIn("slow");
@@ -68,35 +68,35 @@ $("document").ready(function () {
   function loopOne() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b1").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b1").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopOne();
     });
   }
   function loopTwo() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b2").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b2").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopTwo();
     });
   }
   function loopThree() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b3").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b3").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopThree();
     });
   }
   function loopFour() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b4").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b4").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopFour();
     });
   }
   function loopFive() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b5").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b5").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopFive();
     });
   }
@@ -104,28 +104,28 @@ $("document").ready(function () {
   function loopSix() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b6").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b6").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopSix();
     });
   }
   function loopSeven() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b7").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b7").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopSeven();
     });
   }
   function loopEight() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b8").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b8").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopEight();
     });
   }
   function loopNine() {
     var randleft = 1000 * Math.random();
     var randtop = 500 * Math.random();
-    $("#b9").animate({ left: randleft, bottom: randtop }, 500, function () {
+    $("#b9").animate({ left: randleft, bottom: randtop }, 2000, function () {
       loopNine();
     });
   }
