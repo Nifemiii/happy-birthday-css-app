@@ -31,7 +31,7 @@ $("document").ready(function () {
       .delay(2000)
       .promise()
       .done(function () {
-        $("#play").fadeIn("slow");
+        $("#bannar_coming").fadeIn("slow");
       });
   });
   $("#play").click(function () {
